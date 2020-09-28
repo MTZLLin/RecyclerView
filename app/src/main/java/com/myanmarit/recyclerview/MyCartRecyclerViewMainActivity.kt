@@ -16,7 +16,7 @@ class MyCartRecyclerViewMainActivity : AppCompatActivity() {
 
         var flowerList = ArrayList<Flower>()
         flowerList.add(Flower("Fine Grain Sugar",20.00, R.drawable.sugar))
-        flowerList.add(Flower("Peanuts",20.000, R.drawable.peanut))
+        flowerList.add(Flower("Peanuts",20.00, R.drawable.peanut))
         flowerList.add(Flower("Dawat Rice",80.00, R.drawable.dawat_rice))
 
         var flowerAdapter = MyCartAdapter(flowerList)
