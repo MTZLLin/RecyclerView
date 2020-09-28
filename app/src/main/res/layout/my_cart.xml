@@ -8,29 +8,40 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="200dp">
-
+    android:layout_width="350dp"
+    android:layout_height="110dp">
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    app:cardCornerRadius="20dp"
+    tools:ignore="MissingConstraints">
     <ImageView
+
         android:id="@+id/imgFlower"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+</androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        app:layout_constraintLeft_toRightOf="@id/imgFlower"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/cardView"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/txtLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Price - $ "
+        android:layout_marginLeft="10dp"
        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="@id/txtName"
         app:layout_constraintTop_toBottomOf="@id/txtName"
@@ -39,6 +50,7 @@
         android:id="@+id/txtPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         app:layout_constraintLeft_toRightOf="@id/txtLabel"
         app:layout_constraintTop_toBottomOf="@id/txtName" />
 
@@ -47,12 +59,13 @@
         style="@style/TextStyle"
         android:layout_width="112dp"
         android:layout_height="21dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/my__cart_btn"
         android:text="$10 Discount"
         app:layout_constraintLeft_toRightOf="@+id/txtName"
         app:layout_constraintStart_toStartOf="@+id/txtLabel"
+        app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="0dp" />
 
     <Button
@@ -60,8 +73,7 @@
         style="@style/btn_recycler_view"
         android:layout_width="50dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/btn_recycler_view"
         android:text="-"
         app:layout_constraintLeft_toLeftOf="@id/txtLabel"
