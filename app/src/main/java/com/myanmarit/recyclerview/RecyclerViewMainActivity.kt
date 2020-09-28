@@ -2,9 +2,11 @@ package com.myanmarit.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.myanmarit.recyclerview.adapter.FlowerAdapter
 import com.myanmarit.recyclerview.model.Flower
+import com.myanmarit.recyclerview.R
 import kotlinx.android.synthetic.main.recycler_view.*
 
 class RecyclerViewMainActivity : AppCompatActivity() {
@@ -18,6 +20,11 @@ class RecyclerViewMainActivity : AppCompatActivity() {
 
         var flowerAdapter = FlowerAdapter(flowerList)
         flowerRecycler.layoutManager = LinearLayoutManager(this)
+
+        //flowerRecycler.layoutManager = LinearLayoutManager(
+       //     this,LinearLayoutManager.HORIZONTAL,true
+       // )
+        //flowerRecycler.layoutManager = GridLayoutManager(this,2)
         flowerRecycler.adapter = flowerAdapter
     }
 }
