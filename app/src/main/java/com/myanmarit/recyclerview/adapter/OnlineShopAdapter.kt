@@ -18,7 +18,7 @@ class OnlineShopAdapter(var flowerList: ArrayList<OnlineShop>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlowerViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.online_shop_recycler_view,parent,false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.online_shop_user_layout,parent,false)
         return FlowerViewHolder(view)
     }
 
